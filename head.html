@@ -7,6 +7,7 @@
 <h1>David is getting so wham</h1>
 <a href = "https://www.yahoo.com">yahoo bitch</a>
 <p> <b>David's getting wham workout routine</b></p>
+
 <ol>
 <li> Bench Press </li>
 <li> Drop ur ass </li>
@@ -14,18 +15,48 @@
 <li> Push upz </li>
 <li> Tricepz </li>
 </ol>
+
 <button id = 'button'>Click here...</button>
-<p id = 'wham'></p>
+<button id = 'button2'>Undo Press...</button>
+<br/><br/><b id = 'wham'></b>
+
+
 <center>
 <img src = "https://www.yourtango.com/sites/default/files/styles/body_image_default/public/2016%20Oct/simeonpanda%201_0.png" height = "200" width = "200">
-<dt>Me and my soulmate (sike I need a gf >__<)</dt>
+<dt id = "wham"> Me and my soulmate (sike I need a gf >__<)</dt></br>
 </center>
+
+<form>
+<label><b>Enter Temperature: </b></label></br>
+<input type = "text" id = "input"></input>
+</form>
+
 <script>
 function printGetWham() {
-	console.log("<p>Get Wham</p>");
-	document.writeln("Get Wham");
+	document.getElementById("input").value = "";
+	document.getElementById("wham").innerHTML = "You Pressed The Get Wham Button";
 }
+
+function removeGetWham() {
+	document.getElementById("input").value = "";
+	document.getElementById("wham").innerHTML = "";
+}
+
+
+function doConversion() {
+	var c = parseInt(document.getElementById("input").value);
+	if (Number.isInteger(c)) {
+		var f = (c * 9/5) + 32;
+		document.getElementById("wham").innerHTML = "(get wham in "+ f + "°F heat...)";
+	} else { 
+		document.getElementById("wham").innerHTML = ""; 
+	}
+}
+
 document.getElementById('button').onclick = printGetWham;
+document.getElementById('button2').onclick = removeGetWham;
+document.getElementById("input").oninput = doConversion;
 </script>
+
 </body>
 </html>
