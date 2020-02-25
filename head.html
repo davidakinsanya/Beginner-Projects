@@ -24,7 +24,7 @@
 	
 <form>
 <label><b>Enter Temperature (in °C): </b></label></br>
-<input type = "text" id = "input" size = "50" maxlength = "3"></input>
+<input type = "text" id = "input" size = "50" maxlength = "3" placeholder = "000"></input>
 </form>
 <br/>
 <button id = 'button'>Click here...</button>
@@ -45,7 +45,7 @@ function Undo() {
 	
 function doConversion() {
 	var c = parseInt(document.getElementById("input").value);
-	if (Number.isInteger(c)) {
+	if (Number.isInteger(c) && c != 0) {
 		var f = (c * 9/5) + 32;
 		document.getElementById("wham").innerHTML = "(get wham in "+ f + "°F heat...)";
 	} else { 
