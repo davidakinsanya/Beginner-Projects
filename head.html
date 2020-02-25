@@ -3,7 +3,7 @@
 <head>
 <title>nigerian</title>
 </head>
-<body>
+<body style = "background-color:#3398FF">
 
 <h1>David is getting so wham</h1>
 <p><b>David's getting wham workout routine</b></p>
@@ -29,15 +29,18 @@
 <br/>
 <button id = 'button'>Click here...</button>
 <button id = 'button2'>Undo Press...</button>
+<button id = 'button3'>Dark Mode</button>
 <script>
 function printGetWham() {
 	document.getElementById("input").value = "";
 	document.getElementById("wham").innerHTML = "You Pressed The Get Wham Button";
 }
 
-function removeGetWham() {
+function Undo() {
 	document.getElementById("input").value = "";
 	document.getElementById("wham").innerHTML = "";
+	document.body.style.backgroundColor = "#3398FF";
+	document.body.style.color = "black";
 }
 	
 function doConversion() {
@@ -50,9 +53,15 @@ function doConversion() {
 	}
 }
 
+function darkMode() {
+	document.body.style.backgroundColor = "black";
+	document.body.style.color = "#3398FF";
+}
+
 document.getElementById('button').onclick = printGetWham;
-document.getElementById('button2').onclick = removeGetWham;
-document.getElementById("input").oninput = doConversion;
+document.getElementById('button2').onclick = Undo;
+document.getElementById('input').oninput = doConversion;
+document.getElementById('button3').onclick = darkMode;
 </script>
 
 </body>
