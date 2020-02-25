@@ -17,8 +17,8 @@
 </ol>
 
 <center>
-<img src = "https://www.yourtango.com/sites/default/files/styles/body_image_default/public/2016%20Oct/simeonpanda%201_0.png" height = "200" width = "200">
-<dt><b>Me and my soulmate (sike I need a gf >__<)</b></dt></br>
+<img src = "https://www.yourtango.com/sites/default/files/styles/body_image_default/public/2016%20Oct/simeonpanda%201_0.png" height = "200" width = "200" id = "img">
+<dt><b id = "capt">Me and my soulmate (sike I need a gf >__<)</b></dt></br>
 <b id = 'wham'></b>
 </center>	
 	
@@ -28,7 +28,7 @@
 </form>
 <br/>
 <button id = 'button'>Click here...</button>
-<button id = 'button2'>Undo Press...</button>
+<button id = 'button2'>Reset...</button>
 <button id = 'button3'>Dark Mode</button>
 <script>
 function printGetWham() {
@@ -40,7 +40,10 @@ function Undo() {
 	document.getElementById("input").value = "";
 	document.getElementById("wham").innerHTML = "";
 	document.body.style.backgroundColor = "#3398FF";
+	document.getElementById("img").src = ""
 	document.body.style.color = "black";
+	document.getElementById("img").src = "https://www.yourtango.com/sites/default/files/styles/body_image_default/public/2016%20Oct/simeonpanda%201_0.png";
+	document.getElementById("capt").innerHTML = "Me and my soulmate (sike I need a gf >__<)";
 }
 	
 function doConversion() {
@@ -56,6 +59,8 @@ function doConversion() {
 function darkMode() {
 	document.body.style.backgroundColor = "black";
 	document.body.style.color = "#3398FF";
+	document.getElementById("img").src = "https://specials-images.forbesimg.com/imageserve/1180631446/960x0.jpg?fit=scale";
+	document.getElementById("capt").innerHTML = "Dark Mode ft. Zion Williamson";
 }
 
 document.getElementById('button').onclick = printGetWham;
