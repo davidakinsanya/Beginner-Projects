@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+	text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+<h1>SIMEON PANDA IZ MA UNCLE</h1>
+
+<table>
+  <tr>
+    <th>Day</th>
+    <th>Muscle Group</th>
+  </tr>
+
+  <tr>
+    <td>Monday</td>
+    <td>Chest</td>
+  </tr>
+
+  <tr>
+    <td>Tuesday</td>
+    <td>Back</td>
+  </tr>
+
+  <tr>
+    <td>Wednesday</td>
+    <td>Shoulders</td>
+  </tr>
+
+
+  <tr>
+    <td>Thursday</td>
+    <td>Legs</td>
+  </tr>
+
+  <tr>
+    <td>Friday</td>
+    <td>Biceps + Triceps</td>
+  </tr>
+
+</table>
+
+<p>Enter a number pls</p>
+<input type = "text" id = "cube" size = "50"></input>
+<p id = "cubed"></p>
+
+</body>
+
+<script>
+	function cubed() {
+		var c = parseInt(document.getElementById("cube").value);
+		if (Number.isInteger(c)) {
+			document.getElementById("cubed").innerHTML = c + " Cubed is: " + c*c*c + ".";
+		} else {
+			document.getElementById("cubed").innerHTML = " ";
+		}
+	}
+	document.getElementById('cube').oninput = cubed;
+</script>
+</html>
